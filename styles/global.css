@@ -15,24 +15,10 @@
   }
 }
 
-@font-face {
-  font-family: "GT Eesti Pro Display";
-  src: url("/fonts/GT-Eesti-Display-Regular.otf");
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-}
-@font-face {
-  font-family: "GT Eesti Pro Display";
-  src: url("/fonts/GT-Eesti-Display-Medium.otf");
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-}
 :root {
   --background: #f5f6fa;
+
   --primary: #373D4F;
-  --secondary: #9098AE;
 }
 
 body {
@@ -41,7 +27,7 @@ body {
 
 body, button, textarea, input {
   color: var(--primary);
-  font: 400 1rem "GT Eesti Pro Display", sans-serif;
+  font: 400 1rem "Montserrat", sans-serif;
 }
 
 a {
@@ -52,6 +38,7 @@ a {
 button {
   border: 0;
 }
+
 button:hover {
   cursor: pointer;
-}/*# sourceMappingURL=global.css.map */
+}
