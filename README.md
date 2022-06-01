@@ -42,6 +42,6 @@ O protótipo desse website foi desenvolvido pelo [**Itai Bracha**](https://www.f
 - [x] Estrutura de variavei globais
 - [ ] Responsividade da aplicação com `@media`
 - [ ] Menu interativo
-
+- [x] Uso de variáveis globais no `:root`
 
 
