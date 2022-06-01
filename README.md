@@ -29,10 +29,10 @@ O protótipo desse website foi desenvolvido pelo [**Itai Bracha**](https://www.f
 
 ## 🚀 Tecnologias
 
--  [HTML]
--  [CSS]
--  [JavaScript]
--  [API TMDB](https://www.themoviedb.org/documentation/api)
+- HTML
+- CSS
+- JavaScript
+- [API TMDB](https://www.themoviedb.org/documentation/api)
 
 ## 📝 Conhecimentos abordados
 
@@ -40,8 +40,8 @@ O protótipo desse website foi desenvolvido pelo [**Itai Bracha**](https://www.f
 - [x] Integração com a API do TMDB ao usar o `fetch`
 - [x] Criação de elementos dinamicos com o uso do `createElement`
 - [x] Estrutura de variavei globais
-- [] Responsividade da aplicação com `@media`
-- [] Menu interativo
+- [ ] Responsividade da aplicação com `@media`
+- [ ] Menu interativo
 
 
 
