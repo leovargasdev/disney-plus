@@ -11,11 +11,11 @@ function getUrlMovie(movieId) {
 
 function setMainMovie(movieId) {
   fetch(getUrlMovie(movieId)).then(response => response.json()).then(data => {
-    const app = document.getElementById('app')
+    const app = document.querySelector('.app__image img')
   
-    const title = document.querySelector('.movie h1')
-    const description = document.querySelector('.movie p')
-    const info = document.querySelector('.movie span')
+    const title = document.querySelector('.section_movie h1')
+    const description = document.querySelector('.section_movie p')
+    const info = document.querySelector('.section_movie span')
     const rating = document.querySelector('.rating strong')
   
     const yearRelease = data.release_date.split('-')[0]
@@ -26,7 +26,7 @@ function setMainMovie(movieId) {
     info.innerHTML = yearRelease + ' - ' + data.genres[0].name + ' - Movie'
   
     const image = BASE_URL_IMAGE.concat(data.backdrop_path)
-    app.style.backgroundImage = `linear-gradient(90.18deg, rgba(13, 22, 46, 0.7) 23.21%, rgba(13, 22, 46, 0.0001) 96.69%), url('${image}')`
+    app.setAttribute('src', image)
   })
 }
 
@@ -38,16 +38,34 @@ function createButtonMovie(movieId) {
   return button
 }
 
+function createBackgroundImage(movieTitle, movieImage) {
+  const backgroundImage = document.createElement('div')
+  backgroundImage.classList.add('movie__image')
+
+  const image = document.createElement('img')
+  const alt = 'Imagem de background do filme ' + movieTitle
+
+  image.setAttribute('loading', 'lazy')
+  image.setAttribute('alt', alt)
+  image.setAttribute('src', movieImage)
+  
+  backgroundImage.appendChild(image)
+
+  return backgroundImage
+}
+
 function createMovie(movieId) {
   fetch(getUrlMovie(movieId)).then(response => response.json()).then(data => {
     const movie = document.createElement('li')
+    movie.classList.add('movie')
+
     const genre = `<span>${data.genres[0].name}</span>`
     const title = `<strong>${data.title}</strong>`
     const image = BASE_URL_IMAGE.concat(data.backdrop_path)
 
     movie.innerHTML = genre + title
     movie.appendChild(createButtonMovie(movieId))
-    movie.style.backgroundImage = `linear-gradient(180deg, rgba(14, 23, 47, 0.0001) 11.72%, #0E172F 100%), url('${image}')`
+    movie.appendChild(createBackgroundImage(data.title, image))
     moviesList.appendChild(movie)
   })
 }

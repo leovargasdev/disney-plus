@@ -39,7 +39,6 @@ O protótipo desse website foi desenvolvido pelo [**Itai Bracha**](https://www.f
 - [x] Uso semântico do HTML
 - [x] Integração com a API do TMDB ao usar o `fetch`
 - [x] Criação de elementos dinamicos com o uso do `createElement`
-- [x] Estrutura de variavei globais
 - [ ] Responsividade da aplicação com `@media`
 - [ ] Menu interativo
 - [x] Uso de variáveis globais no `:root`

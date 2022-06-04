@@ -1,4 +1,4 @@
-.movie {
+.section_movie {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -11,7 +11,7 @@
   column-gap: 18px;
 }
 
-.movie span, .rating strong, .movie button {
+.section_movie span, .rating strong, .section_movie button {
   font-size: 1.25rem;
   line-height: 1.5rem;
 }
@@ -20,13 +20,13 @@
   font-weight: 600;
 }
 
-.movie h1 {
+.section_movie h1 {
   font-size: 3rem;
   line-height: 4rem;
   font-weight: 700;
 }
 
-.movie p {
+.section_movie p {
   font-size: 1.25rem;
   line-height: 2rem;
   font-weight: 400;
@@ -41,7 +41,7 @@
   -webkit-box-orient: vertical;
 }
 
-.movie button {
+.section_movie button {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -60,6 +60,6 @@
   transition: filter 0.6s;
 }
 
-.movie button:hover {
+.section_movie button:hover {
   filter: brightness(0.85);
 }
