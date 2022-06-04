@@ -1,6 +1,9 @@
 const API_KEY = '03c4e3dc470296959d6bf68804146538'
 const API_LANGUAGE = 'pt-br'
-const BASE_URL_IMAGE = 'https://image.tmdb.org/t/p/original'
+const BASE_URL_IMAGE = {
+  original: 'https://image.tmdb.org/t/p/original',
+  small: 'https://image.tmdb.org/t/p/w500'
+}
 const LIST_MOVIES = ['tt12801262', 'tt4823776', 'tt2096673', 'tt5109280', 'tt7146812', 'tt2948372', 'tt2953050', 'tt3521164', 'tt2380307', 'tt8097030']
 
 const moviesList = document.getElementById('movies__list')
@@ -25,7 +28,7 @@ function setMainMovie(movieId) {
     rating.innerHTML = data.vote_average
     info.innerHTML = yearRelease + ' - ' + data.genres[0].name + ' - Movie'
   
-    const image = BASE_URL_IMAGE.concat(data.backdrop_path)
+    const image = BASE_URL_IMAGE.original.concat(data.backdrop_path)
     app.setAttribute('src', image)
   })
 }
@@ -61,7 +64,7 @@ function createMovie(movieId) {
 
     const genre = `<span>${data.genres[0].name}</span>`
     const title = `<strong>${data.title}</strong>`
-    const image = BASE_URL_IMAGE.concat(data.backdrop_path)
+    const image = BASE_URL_IMAGE.small.concat(data.backdrop_path)
 
     movie.innerHTML = genre + title
     movie.appendChild(createButtonMovie(movieId))
