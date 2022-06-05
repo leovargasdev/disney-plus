@@ -21,6 +21,14 @@
   </head>
   <body>
     <div id="app">
+      <div class="app__image">
+        <img
+          loading="lazy"
+          alt="Imagem do filme destaque"
+          src="https://image.tmdb.org/t/p/original/620hnMVLu6RSZW6a5rwO8gqpt0t.jpg"
+        />
+      </div>
+
       <header>
         <img src="/assets/logo.png" alt="Logo da disney plus" />
 
@@ -32,7 +40,7 @@
       </header>
 
       <main>
-        <section class="movie">
+        <section class="feature__movie">
           <div class="rating">
             <img src="/assets/logo-imdb.png" alt="Logo da IMDB" />
             <strong></strong>
@@ -55,7 +63,8 @@
           <h2>Movies</h2>
 
           <div>
-            <ul id="movies__list"></ul>
+            <ul id="movies__list">
+            </ul>
           </div>
         </aside>
       </main>
