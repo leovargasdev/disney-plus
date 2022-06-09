@@ -35,7 +35,7 @@ header {
 
 .button__menu.active span:last-child {
   width: 100%;
-  transform: rotate(45deg) translateY(-17px)
+  transform: rotate(45deg) translateY(-18px)
 } 
 
 .button__menu.active span:nth-child(1) {

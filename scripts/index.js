@@ -39,16 +39,10 @@ function setMainMovie(movie) {
   appImage.setAttribute('src', movie.image.original)
 }
 
-function changeMainMovie(movieId) {
-  const movie = movies.find(movie => movie.id === movieId)
 
-  setMainMovie(movie)
-  changeButtonMenu()
-}
-
-function createButtonMovie(movieId) {
+function createButtonMovie(movieIndex) {
   const button = document.createElement('button')
-  button.setAttribute('onclick', `changeMainMovie('${movieId}')`)
+  button.setAttribute('onclick', `setMainMovie(movies[${movieIndex}]);changeButtonMenu()`)
   button.innerHTML = '<img src="/assets/icon-play-button.png" alt="Icon play button" />'
 
   return button
@@ -90,7 +84,7 @@ function loadMovies() {
     fetch(getUrlMovie(movie)).then(response => response.json()).then(data => {
 
       const movieData = {
-        id: movie,
+        id: movies.length,
         title: data.title,
         overview: data.overview,
         vote_average: data.vote_average,
