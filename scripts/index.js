@@ -17,8 +17,6 @@ function changeButtonMenu() {
   const button = document.querySelector('.button__menu')
   const navigation = document.querySelector('.navigation')
 
-  console.log(movies)
-
 
   button.classList.toggle('active')
   navigation.classList.toggle('active')
@@ -54,8 +52,13 @@ function changeMainMovie(movieId) {
 
   const movie = movies.find(movie => movie.id === movieId)
 
-  setMainMovie(movie)
-  changeButtonMenu()
+  if(movie?.id) {
+    setMainMovie(movie)
+    changeButtonMenu()
+  } else  {
+    console.log(movies)
+    console.log('não foi possível achar o filme com o id', movieId)
+  }
 }
 
 function createButtonMovie(movieId) {
@@ -98,38 +101,42 @@ function addMovieInList(movie) {
 }
 
 async function getMovieData(movieId) {
-  try {
-    let data = await fetch(getUrlMovie(movieId))
-    data = await data.json()
-  
-    const movieData = {
-      id: movieId,
-      title: data.title,
-      overview: data.overview,
-      vote_average: data.vote_average,
-      genre: data.genres[0].name,
-      release: data.release_date.split('-')[0],
-      image: {
-        original: BASE_URL_IMAGE.original.concat(data.backdrop_path),
-        small: BASE_URL_IMAGE.small.concat(data.backdrop_path),
+  const isMovieInList = movies.findIndex(movie => movie.id === movieId)
+
+  if(isMovieInList === -1) {
+    try {
+      let data = await fetch(getUrlMovie(movieId))
+      data = await data.json()
+    
+      const movieData = {
+        id: movieId,
+        title: data.title,
+        overview: data.overview,
+        vote_average: data.vote_average,
+        genre: data.genres[0].name,
+        release: data.release_date.split('-')[0],
+        image: {
+          original: BASE_URL_IMAGE.original.concat(data.backdrop_path),
+          small: BASE_URL_IMAGE.small.concat(data.backdrop_path),
+        }
       }
+      movies.push(movieData)
+    
+      return movieData
+    } catch(error) {
+      console.log('mensagem de erro:', error.message)
     }
-  
-    return movieData
-  } catch(error) {
-    console.log('mensagem de erro:', error.message)
   }
 
   return null
 }
 
 function loadMovies() {
-  const LIST_MOVIES = ['tt12801262', 'tt4823776']
+  const LIST_MOVIES = ['tt12801262', 'tt4823776', 'tt0800369', 'tt3896198', 'tt1211837', 'tt1825683']
   
   LIST_MOVIES.map(async (movie, index) => {
     const movieData = await getMovieData(movie)
 
-    movies.push(movieData)
     addMovieInList(movieData)
 
     if(index === 0) {
@@ -147,7 +154,6 @@ const buttonAddMovie = document.getElementById('add__movie')
 function formattedMovieId(movieId) {
   if(movieId.includes('https://www.imdb.com/title/')) {
     const id = movieId.split('/')[4]
-    console.log(id)
     return id
   }
   

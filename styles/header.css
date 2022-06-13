@@ -45,3 +45,9 @@ header {
 .button__menu.active span:nth-child(2) {
   opacity: 0;
 } 
+
+@media(max-width: 768px) {
+  header {
+    margin-bottom: 0;
+  }
+}

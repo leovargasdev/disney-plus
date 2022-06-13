@@ -36,3 +36,25 @@ main {
   object-fit: cover;
 }
 
+@media(max-width: 1080px) {
+  #app {
+    padding: 40px;
+  }
+}
+
+@media(max-width: 768px) {
+  #app {
+    padding: 24px;
+  }
+}
+
+@media(max-width: 650px) {
+  #app {
+    padding: 16px;
+  }
+
+  .app__image::after {
+    background: linear-gradient(90.18deg, rgba(13, 22, 46, 0.7) 30%, rgba(13, 22, 46, 0.2) 96.69%);
+  }
+}
+
