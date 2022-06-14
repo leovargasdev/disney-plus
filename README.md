@@ -24,8 +24,9 @@
 
 ## 💻 Projeto
 
-Esse projeto foi desenvolvido durante uma _livecoding_ na [Twitch.tv](https://www.twitch.tv/leovargasdev).
-O protótipo desse website foi desenvolvido pelo [**Itai Bracha**](https://www.figma.com/@itaibracha), [clique aqui](https://www.figma.com/file/AfcZjKNRxDWOSSI0vrnrls?node-id=0%3A105) para abrir o protótipo no figma.
+Este projeto é um tutorial que ensina a como recriar a interface da **Disney Plus** ao usar _HTML_, _CSS_ e _JavaScript_. Todo o conteúdo da aplicação será gerado dinamicamente ao utilizar o serviço(API) da [TMDB](https://www.themoviedb.org/documentation/api). Essa api fornece todos os dados filme, como título, descrição, capa, foto de background e nota de avaliação.
+
+Para facilitar a codificação do projeto foi usado um protótipo do figma como base, o autor do layout é o design [**Itai Bracha**](https://www.figma.com/@itaibracha), [clique aqui](https://www.figma.com/file/AfcZjKNRxDWOSSI0vrnrls?node-id=0%3A105) para abrir o protótipo no figma.
 
 ## 🚀 Tecnologias
 
@@ -34,14 +35,37 @@ O protótipo desse website foi desenvolvido pelo [**Itai Bracha**](https://www.f
 - JavaScript
 - [API TMDB](https://www.themoviedb.org/documentation/api)
 
-## 📝 Conhecimentos abordados
+## 📔 Conhecimentos abordados
 
-- [x] Uso semântico do HTML
-- [x] Integração com a API do TMDB ao usar o `fetch`
-- [x] Criação de elementos dinamicos com o uso do `createElement`
-- [x] Estrutura de variavei globais
-- [ ] Responsividade da aplicação com `@media`
-- [ ] Menu interativo
-- [x] Uso de variáveis globais no `:root`
+- [x]  Uso semântico do HTML
+- [x]  Integração com a API do TMDB ao usar o `fetch`
+- [x]  Criação de elementos dinamicos com o uso do `createElement`
+- [x]  Estrutura de variavei globais no script
+- [x]  Uso de variáveis globais no `:root`
+- [x]  Menu interativo
+- [x]  Melhorias na performace de carregamento
+- [x]  Adicionar favicon
+- [x]  Marcar o filme ativo
+- [x]  Evento para adicionar um filme
+- [x]  Responsividade da aplicação com `@media`
 
+## 📝 Tema de casa
 
+- [ ]  Salvar o filme no navegador(via localStorage)
+- [ ]  Adicionar link o botão ‘Assistir agora’
+- [ ]  Adicionar estilo no scroll do navigation
+
+## Vídeos no youtube 
+
+### #1 DISNEY PLUS - CRIANDO A INTERFACE E INTEGRANDO COM A API
+
+<a href="https://www.youtube.com/watch?v=3pAnc4Miv00" target="_blank">
+ <img src="https://img.youtube.com/vi/3pAnc4Miv00/maxresdefault.jpg" width="100%" height="auto" />
+</a>
+
+---
+### #2 DISNEY PLUS - MELHORIAS DE PERFORMANCE E MENU LATERAL
+
+<a href="https://www.youtube.com/watch?v=3IdLROHFKqM" target="_blank">
+ <img src="https://img.youtube.com/vi/3IdLROHFKqM/maxresdefault.jpg" width="100%" height="auto" />
+</a>
