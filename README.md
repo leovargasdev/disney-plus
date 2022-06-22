@@ -51,8 +51,8 @@ Para facilitar a codificação do projeto foi usado um protótipo do figma como 
 
 ## 📝 Tema de casa
 
-- [ ]  Salvar o filme no navegador(via localStorage)
-- [ ]  Adicionar link o botão ‘Assistir agora’
+- [ ]  Salvar os filmes no navegador(via localStorage)
+- [ ]  Inserir link do filme no botão ‘Assistir agora’
 - [ ]  Adicionar estilo no scroll do navigation
 
 ## Vídeos no youtube 
@@ -68,4 +68,10 @@ Para facilitar a codificação do projeto foi usado um protótipo do figma como 
 
 <a href="https://www.youtube.com/watch?v=3IdLROHFKqM" target="_blank">
  <img src="https://img.youtube.com/vi/3IdLROHFKqM/maxresdefault.jpg" width="100%" height="auto" />
+</a>
+
+### #3 DISNEY PLUS - RESPONSIVIDADE E FORMULÁRIO PARA ADICIONAR FILME
+
+<a href="https://www.youtube.com/watch?v=BybhUjC2wjc" target="_blank">
+ <img src="https://img.youtube.com/vi/BybhUjC2wjc/maxresdefault.jpg" width="100%" height="auto" />
 </a>
