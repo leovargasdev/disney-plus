@@ -55,7 +55,7 @@ Para facilitar a codificação do projeto foi usado um protótipo do figma como 
 - [ ]  Inserir link do filme no botão ‘Assistir agora’
 - [ ]  Adicionar estilo no scroll do navigation
 
-## Vídeos no youtube 
+## 📺 Vídeos no Youtube
 
 ### #1 DISNEY PLUS - CRIANDO A INTERFACE E INTEGRANDO COM A API
 
