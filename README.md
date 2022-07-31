@@ -39,11 +39,11 @@ Para facilitar a codificação do projeto foi usado um protótipo do figma como 
 
 - [x]  Uso semântico do HTML
 - [x]  Integração com a API do TMDB ao usar o `fetch`
-- [x]  Criação de elementos dinamicos com o uso do `createElement`
-- [x]  Estrutura de variavei globais no script
+- [x]  Criação de elementos dinâmicos com o uso do `createElement`
+- [x]  Estrutura de variáveis globais no script
 - [x]  Uso de variáveis globais no `:root`
 - [x]  Menu interativo
-- [x]  Melhorias na performace de carregamento
+- [x]  Melhorias de performace no carregamento de imagens
 - [x]  Adicionar favicon
 - [x]  Marcar o filme ativo
 - [x]  Evento para adicionar um filme
